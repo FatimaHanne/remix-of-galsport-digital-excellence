@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/SiteLayout";
 import { Reveal } from "@/components/Reveal";
 import { Check, Star, ArrowRight } from "lucide-react";
+import heroPacks from "@/assets/hero-packs.jpg";
 
 export const Route = createFileRoute("/packs")({
   head: () => ({
@@ -72,8 +73,11 @@ function PacksPage() {
   return (
     <SiteLayout>
       {/* Hero */}
-      <section className="relative bg-gradient-to-br from-secondary to-secondary/90 text-white py-24 md:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,oklch(0.62_0.19_145/0.3),transparent_60%)]" />
+      <section
+        className="relative text-white py-24 md:py-32 overflow-hidden bg-cover bg-center"
+        style={{ backgroundImage: `url(${heroPacks})` }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/65 to-black/80" />
         <div className="relative container mx-auto px-4 md:px-8 max-w-4xl text-center">
           <Reveal>
             <span className="text-sm font-semibold text-primary uppercase tracking-wider">Tarification</span>
