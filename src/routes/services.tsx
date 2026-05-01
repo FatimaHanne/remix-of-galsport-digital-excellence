@@ -3,6 +3,11 @@ import { SiteLayout } from "@/components/SiteLayout";
 import { Reveal } from "@/components/Reveal";
 import { TrendingUp, Camera, Share2, Target, BarChart3, ArrowRight, Check } from "lucide-react";
 import heroServices from "@/assets/hero-services.jpg";
+import serviceStrategy from "@/assets/service-strategy.jpg";
+import serviceContent from "@/assets/service-content.jpg";
+import serviceSocial from "@/assets/service-social.jpg";
+import serviceAds from "@/assets/service-ads.jpg";
+import serviceAnalytics from "@/assets/service-analytics.jpg";
 
 export const Route = createFileRoute("/services")({
   head: () => ({
@@ -22,30 +27,35 @@ const services = [
     title: "Stratégie digitale",
     description: "Une stratégie basée sur l'analyse fine du marché sportif sénégalais et africain.",
     features: ["Audit digital complet", "Étude de positionnement", "Roadmap 6 à 12 mois", "Définition d'objectifs SMART"],
+    image: serviceStrategy,
   },
   {
     icon: Camera,
     title: "Création de contenu",
     description: "Photos professionnelles, vidéos immersives et storytelling pour faire vibrer vos audiences.",
     features: ["Shootings photo & vidéo", "Storytelling athlète", "Motion design", "Identité visuelle"],
+    image: serviceContent,
   },
   {
     icon: Share2,
     title: "Gestion des réseaux sociaux",
     description: "Communautés engagées sur Instagram, TikTok, X, Facebook et YouTube.",
     features: ["Calendrier éditorial", "Community management", "Modération 7j/7", "Reporting mensuel"],
+    image: serviceSocial,
   },
   {
     icon: Target,
     title: "Campagnes publicitaires",
     description: "Publicité Meta Ads, Google Ads et TikTok Ads pour atteindre la bonne audience.",
     features: ["Ciblage avancé", "A/B testing créatif", "Optimisation budget", "Tracking conversions"],
+    image: serviceAds,
   },
   {
     icon: BarChart3,
     title: "Analyse & optimisation",
     description: "Tableaux de bord, KPIs et insights basés sur l'IA pour décider avec précision.",
     features: ["Dashboards temps réel", "Analyse prédictive IA", "Recommandations actionnables", "Reporting transparent"],
+    image: serviceAnalytics,
   },
 ];
 
@@ -72,9 +82,20 @@ function Services() {
         <div className="container mx-auto px-4 md:px-8 space-y-8 max-w-5xl">
           {services.map((s, i) => (
             <Reveal key={s.title} delay={i * 80}>
-              <div className="group grid md:grid-cols-[auto_1fr] gap-8 rounded-3xl border border-border bg-card p-8 md:p-10 shadow-[var(--shadow-card)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-elegant)] hover:border-primary/40">
-                <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-primary to-primary-glow text-primary-foreground shadow-[var(--shadow-elegant)] transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
-                  <s.icon className="h-8 w-8" />
+              <div className={`group grid md:grid-cols-2 gap-8 md:gap-10 items-center rounded-3xl border border-border bg-card p-6 md:p-8 shadow-[var(--shadow-card)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-elegant)] hover:border-primary/40`}>
+                <div className={`relative overflow-hidden rounded-2xl aspect-[4/3] ${i % 2 === 1 ? "md:order-2" : ""}`}>
+                  <img
+                    src={s.image}
+                    alt={s.title}
+                    loading="lazy"
+                    width={1024}
+                    height={1024}
+                    className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-tr from-black/40 via-transparent to-transparent" />
+                  <div className="absolute top-4 left-4 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-primary-glow text-primary-foreground shadow-[var(--shadow-elegant)]">
+                    <s.icon className="h-6 w-6" />
+                  </div>
                 </div>
                 <div>
                   <div className="flex items-center gap-3 mb-2">
