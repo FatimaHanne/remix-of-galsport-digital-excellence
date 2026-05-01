@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/SiteLayout";
 import { Reveal } from "@/components/Reveal";
 import { TrendingUp, Camera, Share2, Target, BarChart3, ArrowRight, Check } from "lucide-react";
+import heroServices from "@/assets/hero-services.jpg";
 
 export const Route = createFileRoute("/services")({
   head: () => ({
@@ -51,8 +52,11 @@ const services = [
 function Services() {
   return (
     <SiteLayout>
-      <section className="relative bg-gradient-to-br from-secondary to-secondary/90 text-white py-24 md:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,oklch(0.62_0.19_145/0.3),transparent_60%)]" />
+      <section
+        className="relative text-white py-24 md:py-32 overflow-hidden bg-cover bg-center"
+        style={{ backgroundImage: `url(${heroServices})` }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/65 to-black/80" />
         <div className="relative container mx-auto px-4 md:px-8 max-w-4xl">
           <span className="text-sm font-semibold text-primary uppercase tracking-wider">Nos services</span>
           <h1 className="mt-3 text-4xl md:text-6xl font-bold leading-tight">

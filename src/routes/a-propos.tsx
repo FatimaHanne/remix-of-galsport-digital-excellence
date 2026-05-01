@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/SiteLayout";
 import { Reveal } from "@/components/Reveal";
 import { Sparkles, Users, Shield, Target, Eye, Heart, ArrowRight } from "lucide-react";
+import heroAbout from "@/assets/hero-about.jpg";
 
 export const Route = createFileRoute("/a-propos")({
   head: () => ({
@@ -30,8 +31,11 @@ const values = [
 function About() {
   return (
     <SiteLayout>
-      <section className="relative bg-gradient-to-br from-secondary to-secondary/90 text-white py-24 md:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,oklch(0.62_0.19_145/0.3),transparent_60%)]" />
+      <section
+        className="relative text-white py-24 md:py-32 overflow-hidden bg-cover bg-center"
+        style={{ backgroundImage: `url(${heroAbout})` }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/65 to-black/80" />
         <div className="relative container mx-auto px-4 md:px-8 max-w-4xl">
           <span className="text-sm font-semibold text-primary uppercase tracking-wider">Notre histoire</span>
           <h1 className="mt-3 text-4xl md:text-6xl font-bold leading-tight">
