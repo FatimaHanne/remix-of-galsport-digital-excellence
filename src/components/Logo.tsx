@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import logo from "@/assets/galsport-logo.jpeg";
+import logo from "../assets/galsport-logo.png";
 
 export function Logo({ light = false }: { light?: boolean }) {
   return (

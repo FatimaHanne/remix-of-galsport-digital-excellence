@@ -100,9 +100,8 @@ function PacksPage() {
               return (
                 <Reveal key={p.name} delay={idx * 120}>
                   <div
-                    className={`relative flex flex-col h-full rounded-3xl border-2 ${p.ring} bg-card p-8 shadow-[var(--shadow-card)] transition-all duration-300 hover:-translate-y-3 hover:scale-[1.02] hover:shadow-[var(--shadow-elegant)] hover:border-primary ${
-                      featured ? "lg:scale-105 lg:-mt-2 ring-4 ring-primary/10" : ""
-                    }`}
+                    className={`relative flex flex-col h-full rounded-3xl border-2 ${p.ring} bg-card p-8 shadow-[var(--shadow-card)] transition-all duration-300 hover:-translate-y-3 hover:scale-[1.02] hover:shadow-[var(--shadow-elegant)] hover:border-primary ${featured ? "lg:scale-105 lg:-mt-2 ring-4 ring-primary/10" : ""
+                      }`}
                   >
                     {p.badge && (
                       <div className="absolute -top-4 left-1/2 -translate-x-1/2">
@@ -119,11 +118,26 @@ function PacksPage() {
                     <h3 className="text-3xl font-bold">Pack {p.name}</h3>
                     <p className="mt-1 text-sm text-muted-foreground">Pour {p.target}</p>
 
-                    <div className="mt-6 mb-6">
-                      <div className="text-3xl md:text-4xl font-extrabold leading-none">
-                        {p.price}
+                    <div className="mt-6 mb-6 w-full">
+                      <div className="flex items-baseline gap-2 whitespace-nowrap min-w-0">
+
+                        <span className="
+                            font-extrabold leading-none
+                            text-[clamp(10px,2.8vw,20px)]
+                            min-w-0
+                          ">
+                                                {p.price}
+                                              </span>
+
+                                              <span className="
+                            text-[clamp(8px,2vw,14px)]
+                            text-muted-foreground
+                            shrink-0
+                          ">
+                          {p.currency}
+                        </span>
+
                       </div>
-                      <div className="mt-1 text-sm text-muted-foreground">{p.currency}</div>
                     </div>
 
                     <div className="h-px bg-border mb-6" />
@@ -141,11 +155,10 @@ function PacksPage() {
 
                     <Link
                       to="/contact"
-                      className={`mt-8 inline-flex items-center justify-center gap-2 rounded-xl px-6 py-3.5 text-sm font-semibold transition-all duration-200 hover:scale-[1.04] ${
-                        featured
+                      className={`mt-8 inline-flex items-center justify-center gap-2 rounded-xl px-6 py-3.5 text-sm font-semibold transition-all duration-200 hover:scale-[1.04] ${featured
                           ? "bg-gradient-to-r from-primary to-primary-glow text-primary-foreground hover:opacity-90 shadow-[var(--shadow-elegant)]"
                           : "bg-secondary text-white hover:bg-secondary/90"
-                      }`}
+                        }`}
                     >
                       Choisir ce pack <ArrowRight className="h-4 w-4" />
                     </Link>
