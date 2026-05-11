@@ -53,10 +53,10 @@ const services = [
 ];
 
 const stats = [
-  { icon: Trophy, value: "50+", label: "Clubs accompagnés" },
-  { icon: Users, value: "100+", label: "Athlètes suivis" },
+  { icon: Trophy, value: "70+", label: "Clubs accompagnés" },
+  { icon: Users, value: "180+", label: "Athlètes suivis" },
   { icon: BarChart3, value: "300%", label: "Croissance moyenne" },
-  { icon: Globe, value: "10+", label: "Partenaires actifs" },
+  { icon: Globe, value: "15+", label: "Partenaires actifs" },
 ];
 
 const values = [

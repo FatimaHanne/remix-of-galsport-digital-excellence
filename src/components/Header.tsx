@@ -48,12 +48,7 @@ export function Header() {
               {l.label}
             </Link>
           ))}
-          <Link
-            to="/contact"
-            className="inline-flex items-center justify-center rounded-md bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-sm transition-all duration-200 hover:bg-primary/90 hover:scale-[1.04] hover:shadow-[var(--shadow-elegant)]"
-          >
-            Demander un devis
-          </Link>
+         
         </nav>
         <button className="md:hidden p-2" onClick={() => setOpen(!open)} aria-label="Menu">
           {open ? <X /> : <Menu />}
