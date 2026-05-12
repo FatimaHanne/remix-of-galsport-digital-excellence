@@ -2,17 +2,16 @@ import { Link } from "@tanstack/react-router";
 import { Logo } from "./Logo";
 import { Mail, MapPin, Phone } from "lucide-react";
 import {
-  FaYoutube,
   FaTiktok,
   FaFacebookF,
-  FaXTwitter,
+  FaInstagram,
 } from "react-icons/fa6";
 
 export function Footer() {
   return (
     <footer className="border-t border-border bg-secondary text-secondary-foreground">
       <div className="container mx-auto px-4 md:px-8 py-14 grid gap-10 md:grid-cols-4">
-        
+
         {/* Logo + description */}
         <div className="space-y-4">
           <Logo light />
@@ -23,20 +22,10 @@ export function Footer() {
 
           {/* Réseaux sociaux */}
           <div className="flex items-center gap-3 pt-2">
-            
-            {/* YouTube */}
-            <a
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-white/70 transition-all duration-300 hover:-translate-y-1 hover:border-red-500/40 hover:bg-red-600 hover:text-white hover:shadow-lg"
-            >
-              <FaYoutube className="text-lg" />
-            </a>
 
             {/* TikTok */}
             <a
-              href="#"
+              href="https://www.tiktok.com/@galsport3?is_from_webapp=1&sender_device=pc"
               target="_blank"
               rel="noopener noreferrer"
               className="flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-white/70 transition-all duration-300 hover:-translate-y-1 hover:border-white/40 hover:bg-black hover:text-white hover:shadow-lg"
@@ -46,7 +35,7 @@ export function Footer() {
 
             {/* Facebook */}
             <a
-              href="#"
+              href="https://web.facebook.com/profile.php?id=61589669040174"
               target="_blank"
               rel="noopener noreferrer"
               className="flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-white/70 transition-all duration-300 hover:-translate-y-1 hover:border-blue-500/40 hover:bg-blue-600 hover:text-white hover:shadow-lg"
@@ -54,14 +43,14 @@ export function Footer() {
               <FaFacebookF className="text-lg" />
             </a>
 
-            {/* Twitter / X */}
+            {/* Instagram */}
             <a
-              href="#"
+              href="https://www.instagram.com/contact.galsport/"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-white/70 transition-all duration-300 hover:-translate-y-1 hover:border-white/40 hover:bg-white hover:text-black hover:shadow-lg"
+              className="flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-white/70 transition-all duration-300 hover:-translate-y-1 hover:border-pink-500/40 hover:bg-gradient-to-br hover:from-pink-500 hover:via-red-500 hover:to-yellow-500 hover:text-white hover:shadow-lg"
             >
-              <FaXTwitter className="text-lg" />
+              <FaInstagram className="text-lg" />
             </a>
 
           </div>
